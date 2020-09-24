@@ -119,4 +119,28 @@
 		],
 		"description": "jQuery callback function is executed after the current effect is finished."
 	  },
+
+	  "jQuery get method": {
+		"prefix": ["jqget","$.get"],
+		"body": [
+			"$.get('${1:path}',function(data,status){",
+			"  $2",
+			"});$0"
+		],
+		"description": "The $.get() method requests data from the server with an HTTP GET request."
+	  },
+
+	  "jQuery post method": {
+		"prefix": ["jqpost","$.post"],
+		"body": [
+			"$.post('${1:path}',{",
+			"  $2",
+			"},",
+			"function(data,status){",
+			"  $3",
+			"});$0"
+		],
+		"description": "The $.post() method is called to send some data along with the request"
+	  },
+
 }
