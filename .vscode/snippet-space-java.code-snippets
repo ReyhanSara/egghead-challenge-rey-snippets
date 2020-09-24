@@ -1,14 +1,4 @@
-{	
-	  "Java Main method": {
-		"prefix": ["main","psvm"],
-		"body": [
-			"public static void main(String[] args) {",
-			"  System.out.println($1);",			
-			"}$0"
-		],
-		"description": "This code calls the java main method"
-	  },
-
+{		 
 	  "Sample User Object Constructor": {
 		"prefix": ["newcons","object"],
 		"body": [
@@ -34,7 +24,7 @@
 		],
 	  },
 
-	  "Create a HashMap object called people": {
+	  "Create a HashMap object called object": {
 		"prefix": "hmforeach",
 		"body": [
 		  "",
