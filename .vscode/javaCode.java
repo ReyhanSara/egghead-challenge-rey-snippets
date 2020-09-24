@@ -1,1 +1,0 @@
- Scanner myObj = new Scanner(System.in);
