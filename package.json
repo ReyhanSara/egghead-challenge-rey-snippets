@@ -1,0 +1,20 @@
+{
+  "name": "common-snippets",
+  "version": "1.0.0",
+  "description": "Useful snippets for web developers",
+  "categories": [
+        "Snippets"
+  ],
+  "contributes": {
+        "snippets": [
+        {
+          "language": "javascript,jQuery",
+          "path": "./snippet-space.code-snippets"
+        },
+        {
+          "language": "java",
+          "path": "./snippet-space-java.code-snippets"
+        }
+      ]
+    }
+}

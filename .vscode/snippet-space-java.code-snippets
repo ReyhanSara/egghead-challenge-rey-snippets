@@ -1,0 +1,86 @@
+{	
+	  "Java Main method": {
+		"prefix": ["main","psvm"],
+		"body": [
+			"public static void main(String[] args) {",
+			"  System.out.println($1);",			
+			"}$0"
+		],
+		"description": "This code calls the java main method"
+	  },
+
+	  "Sample User Object Constructor": {
+		"prefix": ["newcons","object"],
+		"body": [
+			"function User(${1:para1},${2:para2}){",
+			"  this.firstName = ${1:para1};",
+			"  this.lastName = ${2:para2};",
+			"}$0"
+		],
+		"description": "constructor function"
+	  },
+
+	  "Java HashSet": {
+		"prefix": ["hashset","hs"],
+		"body": [
+			"HashSet<String> objectName = new HashSet<String>();"
+		],
+	  },
+
+	  "Java HashMap": {
+		"prefix": ["hashmap","hm"],
+		"body": [
+			" HashMap<String, String> objectName = new HashMap<String, String>();"
+		],
+	  },
+
+	  "Create a HashMap object called people": {
+		"prefix": "hmforeach",
+		"body": [
+		  "",
+		  "    HashMap<String, Integer> ${1:object} = new HashMap<String, Integer>();",
+		  "    ${1:object}.put(\"$2\", $3);",
+		  "    for (String i :  ${1:object}.keySet()) {",
+		  "      System.out.println(\"key: \" + i + \" value: \" +  ${1:object}.get(i));",
+		  "    }"
+		],
+		"description": "Loop through a HashMap"
+	  },
+
+	  "LinkedList": {
+		"prefix": ["linkedlist"],
+		"body": [
+			"LinkedList<String> object = new LinkedList<String>();"
+		],
+		"description": "initiate an linked list"
+	  },
+
+	  "ArrayList": {
+		"prefix": ["arraylist","intarray"],
+		"body": [
+			"ArrayList<Integer> objectName = new ArrayList<Integer>();"
+		],
+		"description": "initiate an arraylist"
+	  },
+
+	  "Scanner": {
+		"prefix": ["scanner"],
+		"body": [
+			" Scanner myObj = new Scanner(System.in);"
+		],
+		"description": "Scanner class is used to get user input"
+	  },
+
+	  "Java Error Handling": {
+		"prefix": ["javatrycatch","javatry"],
+		"body": [
+			"try{",
+			"  $1",
+			"catch(Exception e){",
+			"  $2",
+			"}$0"
+		],
+		"description": "This handles coding errors in Java"
+	  },
+	
+}

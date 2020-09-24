@@ -1,0 +1,117 @@
+{
+	"jQuery AJAX method" : {
+		"prefix" : "ajax",
+		"body" :[
+			"$.ajax({",
+			"   url : '${1}',",
+			"   type : 'GET',",
+			"   success : function(result){",
+			"   console.log($2);",
+			"  },",
+			"  error : function(error){",
+			"     console.log(error$3);",
+			"  }",
+			"});$0"
+		],
+		"description": "This method is used to request for or post data to the server"
+	},
+
+	"fetch method" : {
+		"prefix" : "fetch",
+		"body" :[
+			"fetch(Url,otherPrem)",
+			".then(data=>{return data.json()})",
+			".then(res=>{console.log(res)})",
+			".catch(error=>console.log(error))"
+		],
+		"description": "This is another HTTP method used to request for or post data to the server"
+	},
+
+	"jQuery ready() Method": {
+		"prefix": ["doc","ready"],
+		"body": [
+			"$(document).ready(function(){",
+			"$1",
+			"});$0"
+		],
+		"description": "use ready() to make a function available after the document is loaded"
+	  },
+
+	  "jQuery call back function": {
+		"prefix": ["jqcall","jqcallback"],
+		"body": [
+			"$('${1:selector}').click(function(){",
+			" $('${2:selector}').methdod('$3',function(){", 
+			"   $4",
+			" });",
+			"});$0"
+		],
+		"description": "jQuery callback function is executed after the current effect is finished."
+	  },
+
+	  "jQuery get method": {
+		"prefix": ["jqget","$.get"],
+		"body": [
+			"$.get('${1:path}',function(data,status){",
+			"  $2",
+			"});$0"
+		],
+		"description": "The $.get() method requests data from the server with an HTTP GET request."
+	  },
+
+	  "jQuery post method": {
+		"prefix": ["jqpost","$.post"],
+		"body": [
+			"$.post('${1:path}',{",
+			"  $2",
+			"},",
+			"function(data,status){",
+			"  $3",
+			"});$0"
+		],
+		"description": "The $.post() method is called to send some data along with the request"
+	  },
+
+	  "jQuery Hide and Show": {
+		"prefix": ["hide","show"],
+		"body": [
+		  "$(\"#hide\").click(function(){",
+		  "  $('${1:p}').hide();",
+		  "});",
+		  "",
+		  "$(\"#show\").click(function(){",
+		  "  $('${2:p}').show();",
+		  "});"
+		],
+		"description": "hide and show HTML elements"
+	  },
+
+	  "jQuery Animate method": {
+		"prefix": "animate",
+		"body": [
+		  "$(\"div\").animate({",
+		  "    left: '$1',",
+		  "    opacity: '$2',",
+		  "    height: '${3:px}',",
+		  "    width: '${4:px}'",
+		  "});"
+		],
+		"description": "The jQuery animate() method is used to create custom animations."
+	  },
+
+	  "JS Error Handling" : {
+		"prefix" :["try","tcf","tryfinally"],
+		"body": [
+			"try {",
+			"\t$1",
+			"}",
+			"catch (err){",
+			"\t$2",
+			"}",
+			"finally {",
+			"\t$3",
+			"}$0"
+		],
+		"description": "Creates try catch finally statement"
+	},
+}
