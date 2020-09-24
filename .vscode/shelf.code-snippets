@@ -14,28 +14,8 @@
 	// 		"$2"
 	// 	],
 	// 	"description": "Log output to console"
-	// }
-	"Print to console": {
-		"prefix": "con",
-		"body": [
-		  "console.log('$1');",
-		  "$2"
-		],
-		"description": "console.log()"
-	  },
-
-	  "Get Method": {
-		"prefix": "app.get",
-		"body": [
-		  "app.get('${2:path}', (req,res) => {",
-		  "  \t$1",
-		  "   });$0"
-		],
-		"description": "Get Method"
-	  },
-
-
-	  "AJAX method" : {
+	// }	
+	"AJAX method" : {
 		"prefix" : "ajax",
 		"body" :[
 			"$.ajax({",
@@ -48,5 +28,95 @@
 			"});$0"
 		],
 		"description": "ajax method"
-	}
+	},
+
+	"Javascript function Syntax" : {
+		"prefix" : ["func","fun"],
+		"body": [
+			"function name($1){",
+			"\t$2",
+			"}$0"
+		],
+		"description": "Creates a Function in javascript"
+	},
+
+	"Javascript While Loop" : {
+		"prefix" :["while"],
+		"body": [
+			"while($1){",
+			"\t$2",
+			"}$0"
+		],
+		"description": "Creates a while loop"
+	},
+
+	"Javascript Do While Loop" : {
+		"prefix" :["do","dow"],
+		"body": [
+			"do{",
+			"\t$1",
+			"}",
+			"while($2);$0"
+		],
+		"description": "Creates a do while loop"
+	},
+
+	"JS Error Handling" : {
+		"prefix" :["try","tcf","tryfinally"],
+		"body": [
+			"try {",
+			"\t$1",
+			"}",
+			"catch (err){",
+			"\t$2",
+			"}",
+			"finally {",
+			"\t$3",
+			"}$0"
+		],
+		"description": "Creates try catch statement"
+	},
+
+	"Express js HTTP Get Request": {
+		"prefix": "app.get",
+		"body": [
+		  "app.get('${2:path}', (req,res) => {",
+		  "  \t$1",
+		  "   });$0"
+		],
+		"description": "Get Method"
+	  },
+
+	  "Sample User Object Constructor": {
+		"prefix": ["newcon","object"],
+		"body": [
+			"function User(${1:para1},${2:para2}){",
+			"  this.firstName = ${1:para1};",
+			"  this.lastName = ${2:para2};",
+			"}$0"
+		],
+		"description": "constructor function"
+	  },
+
+	  "jQuery ready() Method": {
+		"prefix": ["doc","ready"],
+		"body": [
+			"$(document).ready(function(){",
+			"$1",
+			"});$0"
+		],
+		"description": "use ready() to make a function available after the document is loaded"
+	  },
+
+	  "jQuery call back function": {
+		"prefix": ["jqcall","jqcallback"],
+		"body": [
+			"$('${1:selector}').click(function(){",
+			" $('${2:selector}').methdod('$3',function(){", 
+			"   $4",
+			" });",
+			"});$0"
+		],
+		"description": "jQuery callback function is executed after the current effect is finished."
+	  },
 }
